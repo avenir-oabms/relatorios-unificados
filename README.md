@@ -235,33 +235,33 @@ Local de acesso casa ( aveni@DESKTOP-FC65AN1 MINGW64 /x/xampp/htdocs/relatorios-
 ---
 ### Voltando versões estáveis no Github
 
-1. Ver o histórico de versões:
-bashgit log --oneline
-Isso mostra todas as versões (commits) com códigos únicos.
+  1. Ver o histórico de versões: bashgit log --oneline
+  Isso mostra todas as versões (commits) com códigos únicos.
 
-2. Voltar para uma versão específica:
-Opção A - Voltar temporariamente (para testar): bashgit checkout 54d2b9e
-(Use o código do commit que você quer - no seu caso pode ser esse 54d2b9e do primeiro commit)
+  2. Voltar para uma versão específica:
+    - Opção A - Voltar temporariamente (para testar): bashgit checkout 54d2b9e
+      (Use o código do commit que você quer - no seu caso pode ser esse 54d2b9e do primeiro commit)
 
-Opção B - Voltar definitivamente: bashgit reset --hard 54d2b9e
-⚠️ CUIDADO: Isso apaga TODAS as mudanças posteriores!
+    - Opção B - Voltar definitivamente: bashgit reset --hard 54d2b9e
+    ⚠️CUIDADO: Isso apaga TODAS as mudanças posteriores!
 
-3. Voltar apenas alguns arquivos: bashgit checkout 54d2b9e -- arquivo.php
+  3. Voltar apenas alguns arquivos: bashgit checkout 54d2b9e -- arquivo.php
 
-4. Criar uma versão "de segurança" antes de mexer: bashgit tag v1.0-estavel
+  4. Criar uma versão "de segurança" antes de mexer: bashgit tag v1.0-estavel
 
-5. Desfazer apenas o último commit (mais comum): 
-bash# Mantém as mudanças nos arquivos: git reset --soft HEAD~1
+  5. Desfazer apenas o último commit (mais comum): bash# Mantém as mudanças nos arquivos: git reset --soft HEAD~1
 
-# Remove as mudanças também:
-git reset --hard HEAD~1
+---
+### Remove as mudanças também:
+
+- git reset --hard HEAD~1
 Exemplo prático:
 
 Você fez mudanças e deu problema
 
-git log --oneline - vê as versões
-git reset --hard abc123 - volta para a versão boa
-git push -f origin master - atualiza o GitHub
+- git log --oneline - vê as versões
+- git reset --hard abc123 - volta para a versão boa
+- git push -f origin master - atualiza o GitHub
 
 Dica: Sempre faça commits pequenos e frequentes com mensagens claras. Assim fica fácil identificar qual versão voltar!
 Quer que eu te mostre como fazer um teste prático disso?
