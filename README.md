@@ -219,3 +219,15 @@ Este repositório consolida autenticação, RBAC e base visual para os módulos 
 3) Commits futuros podem citar este README para padronizar novos módulos/telas.
 
 Se quiser, eu também preparo um **README-backup.md** só com comandos “copiar-e-colar” (setup rápido) para quem for instalar em outra máquina.
+
+---
+### ESTÃO SALVOS NO GITHUB
+
+relatorios-unificados
+Comandos para atualização
+
+Local de acesso casa ( aveni@DESKTOP-FC65AN1 MINGW64 /x/xampp/htdocs/relatorios-unificados (master) )
+
+1) git add .
+2) git commit -m "Descrição da mudança"
+3) git push
