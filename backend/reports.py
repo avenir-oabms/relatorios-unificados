@@ -1,10 +1,23 @@
 from flask import Blueprint, request, jsonify
 from functools import wraps
 from sqlalchemy import text
-from db import MySQLSession, MSSQLSession
+from db import MySQLSession, MSSQLSession, ping_mysql, ping_mssql
 from auth import verify_token
 
 bp = Blueprint("reports", __name__, url_prefix="/api/reports")
+
+@bp.get("/health/db")
+def health_db():
+    """
+    Diagnóstico das conexões de banco.
+    - mysql: { ok: bool, value?: 1, error?: str }
+    - mssql: { ok: bool, value?: 1, error?: str }
+    """
+    return jsonify({
+        "mysql": ping_mysql(),
+        "mssql": ping_mssql(),
+    })
+
 
 def require_auth(f):
     @wraps(f)
