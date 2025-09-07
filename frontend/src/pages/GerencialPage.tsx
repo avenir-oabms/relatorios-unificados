@@ -2,34 +2,21 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Home as HomeIcon,
-  Users,
-  BarChart3,
   Settings,
   Bell,
   ClipboardList,
   LogOut,
   Pencil,
   Info,
+  BarChart3,
+  Lock,
 } from "lucide-react";
+import AdminUsersPanel from "./AdminUsersPanel";
 
 const API_BASE = "http://192.168.0.64:5055";
 
 type UserRole = "admin" | "tecnico" | "usuario" | "gerente" | "coordenador" | "diretor";
-
-type UserType = {
-  id: number;
-  name: string;
-  email: string;
-  role: UserRole | string;
-};
-
-type Aviso = {
-  id: number;
-  titulo: string;
-  mensagem: string;
-  criado_em?: string | null;
-  autor?: string | null;
-};
+type UserType = { id: number; name: string; email: string; role: UserRole | string };
 
 const ROLE_LABELS: Record<string, string> = {
   admin: "Administrador",
@@ -49,32 +36,13 @@ const getUserFromStorage = (): UserType | null => {
   }
 };
 
-const fetchWithAuth = async (url: string, options: RequestInit = {}) => {
-  const token = localStorage.getItem("authToken");
-  return fetch(url, {
-    ...options,
-    headers: {
-      Authorization: `Bearer ${token}`,
-      "Content-Type": "application/json",
-      ...options.headers,
-    },
-  });
-};
-
-export default function HomePage() {
+export default function GerencialPage() {
   const navigate = useNavigate();
   const [user, setUser] = useState<UserType | null>(null);
 
-  // Mural
-  const [avisos, setAvisos] = useState<Aviso[]>([]);
-  const [loadingAvisos, setLoadingAvisos] = useState(true);
-  const [errorAvisos, setErrorAvisos] = useState<string | null>(null);
+  const [unreadAlerts] = useState<number>(0);
+  const [pendingTasks] = useState<number>(0);
 
-  // Topo direito: badges (placeholders – ligar aos endpoints reais depois)
-  const [unreadAlerts, setUnreadAlerts] = useState<number>(0);
-  const [pendingTasks, setPendingTasks] = useState<number>(0);
-
-  // Modal: Meu Perfil
   const [showSelfEditModal, setShowSelfEditModal] = useState(false);
   const [selfForm, setSelfForm] = useState({
     name: "",
@@ -84,8 +52,8 @@ export default function HomePage() {
     confirmNewPassword: "",
   });
 
-  // Modal: Sobre / Créditos (rodapé da barra lateral)
   const [showAboutModal, setShowAboutModal] = useState(false);
+  const [activeTab, setActiveTab] = useState<"usuarios" | "relatorios">("usuarios");
 
   useEffect(() => {
     const currentUser = getUserFromStorage();
@@ -94,26 +62,10 @@ export default function HomePage() {
       return;
     }
     setUser(currentUser);
-    loadAvisos();
-    // Exemplos para ligar contadores reais no futuro:
-    // fetchWithAuth(`${API_BASE}/api/notifications/unread_count`).then(r => r.json()).then(d => setUnreadAlerts(d.count || 0));
-    // fetchWithAuth(`${API_BASE}/api/tasks/pending_count`).then(r => r.json()).then(d => setPendingTasks(d.count || 0));
   }, [navigate]);
 
-  async function loadAvisos() {
-    setLoadingAvisos(true);
-    setErrorAvisos(null);
-    try {
-      const resp = await fetchWithAuth(`${API_BASE}/api/mural/`);
-      if (!resp.ok) throw new Error("Falha ao carregar avisos");
-      const data = await resp.json();
-      setAvisos(Array.isArray(data) ? data : []);
-    } catch (e: any) {
-      setErrorAvisos(e.message || "Erro ao carregar avisos");
-    } finally {
-      setLoadingAvisos(false);
-    }
-  }
+  if (!user) return null;
+  const isAdmin = user.role === "admin";
 
   function handleLogout() {
     localStorage.clear();
@@ -133,95 +85,17 @@ export default function HomePage() {
     setShowSelfEditModal(true);
   }
 
-  async function handleSaveMyName() {
-    if (!user?.id) {
-      alert("Usuário atual não encontrado.");
-      return;
-    }
-    if (!selfForm.name.trim()) {
-      alert("Informe um nome válido.");
-      return;
-    }
-    try {
-      const res = await fetchWithAuth(`${API_BASE}/api/auth/users/${user.id}`, {
-        method: "PATCH",
-        body: JSON.stringify({ name: selfForm.name }),
-      });
-      const data = await res.json();
-      if (data.error) {
-        alert("Erro ao salvar: " + data.error);
-        return;
-      }
-      const updated = { ...user, name: selfForm.name };
-      localStorage.setItem("authUser", JSON.stringify(updated));
-      setUser(updated);
-      alert("Nome atualizado com sucesso!");
-    } catch {
-      alert("Erro ao atualizar nome.");
-    }
-  }
-
-  async function handleChangeMyPassword() {
-    if (!selfForm.currentPassword || !selfForm.newPassword) {
-      alert("Informe a senha atual e a nova senha.");
-      return;
-    }
-    if (selfForm.newPassword.length < 8) {
-      alert("A nova senha deve ter pelo menos 8 caracteres.");
-      return;
-    }
-    if (selfForm.newPassword !== selfForm.confirmNewPassword) {
-      alert("A confirmação de senha não confere.");
-      return;
-    }
-    try {
-      const res = await fetchWithAuth(`${API_BASE}/api/auth/change_password`, {
-        method: "POST",
-        body: JSON.stringify({
-          current_password: selfForm.currentPassword,
-          new_password: selfForm.newPassword,
-        }),
-      });
-      const data = await res.json();
-      if (data.error) {
-        alert("Erro ao alterar senha: " + data.error);
-        return;
-      }
-      alert("Senha alterada com sucesso!");
-      setSelfForm((p) => ({ ...p, currentPassword: "", newPassword: "", confirmNewPassword: "" }));
-    } catch {
-      alert("Erro ao alterar senha.");
-    }
-  }
-
-  if (!user) {
-    return (
-      <div
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#f8fafc",
-        }}
-      >
-        <div>Redirecionando...</div>
-      </div>
-    );
-  }
-
-  const isAdmin = user.role === "admin";
-
-  // UI helpers
   const MenuButton = ({
     icon,
     label,
     onClick,
+    active = false,
     title,
   }: {
     icon: JSX.Element;
     label: string;
     onClick?: () => void;
+    active?: boolean;
     title?: string;
   }) => (
     <button
@@ -230,9 +104,9 @@ export default function HomePage() {
       style={{
         width: "100%",
         textAlign: "left",
-        padding: "0.55rem 0.8rem", // compacto
+        padding: "0.55rem 0.8rem",
         borderRadius: "0.5rem",
-        backgroundColor: "transparent",
+        backgroundColor: active ? "rgba(255,255,255,0.12)" : "transparent",
         border: "none",
         color: "white",
         cursor: "pointer",
@@ -241,7 +115,9 @@ export default function HomePage() {
         gap: "0.6rem",
       }}
       onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.1)")}
-      onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
+      onMouseOut={(e) =>
+        (e.currentTarget.style.backgroundColor = active ? "rgba(255,255,255,0.12)" : "transparent")
+      }
     >
       {icon}
       <span style={{ fontSize: ".875rem" }}>{label}</span>
@@ -300,6 +176,37 @@ export default function HomePage() {
     </div>
   );
 
+  const TabButton = ({
+    label,
+    active,
+    onClick,
+    disabled,
+  }: {
+    label: string;
+    active?: boolean;
+    disabled?: boolean;
+    onClick?: () => void;
+  }) => (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      style={{
+        padding: "0.5rem 0.75rem",
+        borderRadius: 8,
+        border: "1px solid " + (active ? "#111827" : "#e5e7eb"),
+        background: active ? "#111827" : "white",
+        color: active ? "white" : "#111827",
+        cursor: disabled ? "not-allowed" : "pointer",
+        opacity: disabled ? 0.5 : 1,
+        fontWeight: 600,
+        fontSize: 13,
+      }}
+      title={disabled ? "Em breve" : undefined}
+    >
+      {label}
+    </button>
+  );
+
   return (
     <div
       style={{
@@ -309,8 +216,6 @@ export default function HomePage() {
         fontFamily: "'Poppins', sans-serif",
       }}
     >
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');`}</style>
-
       {/* Sidebar */}
       <div
         style={{
@@ -350,28 +255,22 @@ export default function HomePage() {
         <nav style={{ flex: 1, padding: "0.8rem", display: "flex", flexDirection: "column", gap: "0.3rem" }}>
           <MenuButton icon={<HomeIcon size={18} />} label="Início" onClick={() => navigate("/")} />
           {isAdmin && (
-            <MenuButton icon={<Users size={18} />} label="Gerencial" onClick={() => navigate("/management")} title="Administrar usuários e relatórios" />
+            <MenuButton
+              icon={<Settings size={18} />}
+              label="Gerencial"
+              active
+              onClick={() => navigate("/management")}
+              title="Administrar usuários e relatórios"
+            />
           )}
-          {/* Relatórios (sem submenu) */}
-          <MenuButton
-            icon={<BarChart3 size={18} />}
-            label="Relatórios"
-            onClick={() => navigate("/reports")}
-            title="Relatórios (em breve com controle por departamento/pessoa)"
-          />
-          {/* Demais itens – rótulos curtos */}
-          <MenuButton
-            icon={<ClipboardList size={18} />}
-            label="Comunicado Interno"
-            onClick={() => navigate("/")}
-            title="CI - Sistema de Comunicado Interno"
-          />
-          <MenuButton icon={<ClipboardList size={18} />} label="Chamados" onClick={() => navigate("/")} title="Central de Chamados" />
-          <MenuButton icon={<Settings size={18} />} label="Ajustes" onClick={() => navigate("/")} title="Ajustes Gerenciais" />
-          <MenuButton icon={<Bell size={18} />} label="Avisos" onClick={() => navigate("/")} title="Central de Avisos" />
-          <MenuButton icon={<ClipboardList size={18} />} label="Calendário" onClick={() => navigate("/")} title="Calendário Institucional" />
-          <MenuButton icon={<ClipboardList size={18} />} label="Tarefas" onClick={() => navigate("/")} title="Sistema de Tarefas" />
-          <MenuButton icon={<Bell size={18} />} label="Notificações" onClick={() => navigate("/notifications")} title="Central de Notificações" />
+          <MenuButton icon={<BarChart3 size={18} />} label="Relatórios" onClick={() => navigate("/reports")} />
+          <MenuButton icon={<ClipboardList size={18} />} label="Comunicado Interno" onClick={() => navigate("/")} />
+          <MenuButton icon={<ClipboardList size={18} />} label="Chamados" onClick={() => navigate("/")} />
+          <MenuButton icon={<Settings size={18} />} label="Ajustes" onClick={() => navigate("/")} />
+          <MenuButton icon={<Bell size={18} />} label="Avisos" onClick={() => navigate("/")} />
+          <MenuButton icon={<ClipboardList size={18} />} label="Calendário" onClick={() => navigate("/")} />
+          <MenuButton icon={<ClipboardList size={18} />} label="Tarefas" onClick={() => navigate("/")} />
+          <MenuButton icon={<Bell size={18} />} label="Notificações" onClick={() => navigate("/notifications")} />
         </nav>
 
         {/* Rodapé / Créditos */}
@@ -410,7 +309,7 @@ export default function HomePage() {
 
       {/* Main */}
       <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        {/* Header mais estreito */}
+        {/* Header compacto */}
         <div
           style={{
             backgroundColor: "white",
@@ -421,28 +320,14 @@ export default function HomePage() {
         >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
             <div>
-              <h1 style={{ fontSize: "1.25rem", fontWeight: 600, color: "#1f2937", margin: 0 }}>
-                Início
-              </h1>
+              <h1 style={{ fontSize: "1.25rem", fontWeight: 600, color: "#1f2937", margin: 0 }}>Gerencial</h1>
               <p style={{ fontSize: "0.8rem", color: "#6b7280", margin: "0.2rem 0 0 0" }}>
-                Bem-vindo ao sistema, {user.name}!
+                Administração de usuários e gerenciamento de relatórios
               </p>
             </div>
-
-            {/* Topo direito: atalhos com badge + perfil */}
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <BadgeIcon
-                icon={<Bell size={16} />}
-                count={unreadAlerts}
-                title="Notificações"
-                onClick={() => navigate("/notifications")}
-              />
-              <BadgeIcon
-                icon={<ClipboardList size={16} />}
-                count={pendingTasks}
-                title="Tarefas"
-                onClick={() => navigate("/tasks")}
-              />
+              <BadgeIcon icon={<Bell size={16} />} title="Notificações" count={unreadAlerts} />
+              <BadgeIcon icon={<ClipboardList size={16} />} title="Tarefas" count={pendingTasks} />
 
               <div style={{ textAlign: "right", marginLeft: 6 }}>
                 <div
@@ -497,7 +382,6 @@ export default function HomePage() {
               >
                 <Pencil size={15} />
               </button>
-
               <button
                 onClick={handleLogout}
                 title="Sair"
@@ -520,91 +404,81 @@ export default function HomePage() {
 
         {/* Conteúdo */}
         <main style={{ flex: 1, padding: "1.2rem", overflow: "auto" }}>
-          {/* Mural de Avisos – versão elegante */}
-          <section
-            style={{
-              backgroundColor: "white",
-              borderRadius: "0.75rem",
-              border: "1px solid #e5e7eb",
-              overflow: "hidden",
-            }}
-          >
+          {!isAdmin ? (
             <div
               style={{
-                padding: "1rem 1rem",
-                borderBottom: "1px solid #e5e7eb",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: 12,
+                background: "white",
+                border: "1px solid #e5e7eb",
+                borderRadius: 12,
+                padding: "2rem",
+                textAlign: "center",
+                color: "#374151",
               }}
             >
-              <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#111827", margin: 0 }}>
-                Mural de Avisos
-              </h3>
-              <div style={{ display: "flex", gap: 8 }}>
-                <button
-                  onClick={loadAvisos}
-                  style={{
-                    background: "#111827",
-                    color: "white",
-                    padding: "0.4rem 0.75rem",
-                    borderRadius: 8,
-                    border: "none",
-                    cursor: "pointer",
-                    fontWeight: 600,
-                    fontSize: 13,
-                  }}
-                  title="Recarregar"
-                >
-                  Recarregar
-                </button>
+              <Lock size={38} />
+              <h3>Acesso restrito</h3>
+              <p>
+                Esta área é permitida apenas para o perfil <strong>Administrador</strong>.
+              </p>
+            </div>
+          ) : (
+            <>
+              {/* Tabs internas */}
+              <div
+                style={{
+                  background: "white",
+                  border: "1px solid #e5e7eb",
+                  borderRadius: 12,
+                  padding: 12,
+                  display: "flex",
+                  gap: 8,
+                  marginBottom: 12,
+                }}
+              >
+                <TabButton
+                  label="Usuários"
+                  active={activeTab === "usuarios"}
+                  onClick={() => setActiveTab("usuarios")}
+                />
+                <TabButton
+                  label="Relatórios (em breve)"
+                  active={activeTab === "relatorios"}
+                  onClick={() => setActiveTab("relatorios")}
+                />
               </div>
-            </div>
 
-            <div style={{ padding: "1rem", display: "grid", gap: "0.8rem" }}>
-              {loadingAvisos ? (
-                <div style={{ color: "#6b7280" }}>Carregando avisos...</div>
-              ) : errorAvisos ? (
-                <div style={{ color: "#dc2626" }}>Erro ao carregar avisos: {errorAvisos}</div>
-              ) : avisos.length === 0 ? (
-                <div style={{ color: "#6b7280" }}>Nenhum aviso publicado.</div>
-              ) : (
-                avisos.map((aviso) => (
-                  <article
-                    key={aviso.id}
-                    style={{
-                      background: "#f9fafb",
-                      border: "1px solid #e5e7eb",
-                      borderRadius: 12,
-                      padding: "0.9rem",
-                      position: "relative",
-                    }}
-                  >
-                    <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 8 }}>
-                      <h4 style={{ margin: 0, fontSize: "1rem", fontWeight: 700, color: "#111827" }}>
-                        {aviso.titulo}
-                      </h4>
-                      {aviso.criado_em && (
-                        <time
-                          dateTime={aviso.criado_em}
-                          style={{ fontSize: 12, color: "#6b7280", whiteSpace: "nowrap" }}
-                        >
-                          {new Date(aviso.criado_em).toLocaleString("pt-BR")}
-                        </time>
-                      )}
-                    </div>
-                    {aviso.autor && (
-                      <div style={{ fontSize: 12, color: "#6b7280", marginTop: 2 }}>
-                        Publicado por {aviso.autor}
-                      </div>
-                    )}
-                    <p style={{ margin: "0.55rem 0 0 0", color: "#374151", lineHeight: 1.5 }}>{aviso.mensagem}</p>
-                  </article>
-                ))
+              {activeTab === "usuarios" && (
+                <div
+                  style={{
+                    background: "white",
+                    border: "1px solid #e5e7eb",
+                    borderRadius: 12,
+                    padding: 0,
+                    overflow: "hidden",
+                  }}
+                >
+                  <AdminUsersPanel />
+                </div>
               )}
-            </div>
-          </section>
+
+              {activeTab === "relatorios" && (
+                <section
+                  style={{
+                    background: "white",
+                    border: "1px solid #e5e7eb",
+                    borderRadius: 12,
+                    padding: 16,
+                  }}
+                >
+                  <h3>Gerenciamento de Relatórios</h3>
+                  <p>
+                    Em breve: liberar relatórios por <strong>grupo</strong> ou{" "}
+                    <strong>pessoa</strong>.
+                  </p>
+                </section>
+              )}
+            </>
+          )}
         </main>
       </div>
 
@@ -651,15 +525,12 @@ export default function HomePage() {
 
             <div style={{ padding: 14, display: "grid", gap: 10, fontSize: 14, color: "#374151" }}>
               <p>
-                <strong>SGC — Sistema de Gerenciamento Central</strong><br />
+                <strong>SGC — Sistema de Gerenciamento Central</strong>
+                <br />
                 Desenvolvido pelo <strong>Departamento de Tecnologia da Informação</strong> OAB/MS.
               </p>
-              <p>
-                Versão: 1.0.0 (placeholder) • Build: {new Date().toLocaleDateString("pt-BR")}
-              </p>
-              <p>
-                Contato: ti@oabms.org.br (placeholder). Este modal pode exibir changelog, termos de uso e políticas de privacidade.
-              </p>
+              <p>Versão: 1.0.0 (placeholder) • Build: {new Date().toLocaleDateString("pt-BR")}</p>
+              <p>Contato: ti@oabms.org.br (placeholder).</p>
               <div style={{ display: "flex", justifyContent: "flex-end", gap: 8, marginTop: 6 }}>
                 <button
                   onClick={() => setShowAboutModal(false)}
@@ -740,35 +611,37 @@ export default function HomePage() {
             </div>
 
             <div style={{ padding: 14, display: "grid", gap: 12 }}>
-              {/* Nome */}
               <div style={{ display: "grid", gap: 8 }}>
                 <label style={{ fontSize: 12.5, fontWeight: 600, color: "#374151" }}>Nome</label>
                 <input
                   type="text"
                   value={selfForm.name}
                   onChange={(e) => setSelfForm((p) => ({ ...p, name: e.target.value }))}
-                  style={{
-                    width: "100%",
-                    padding: "8px 10px",
-                    border: "1px solid #e5e7eb",
-                    borderRadius: 8,
-                    fontSize: 14,
-                  }}
+                  style={{ width: "100%", padding: "8px 10px", border: "1px solid #e5e7eb", borderRadius: 8, fontSize: 14 }}
                 />
                 <div style={{ display: "flex", gap: 8 }}>
                   <button
-                    onClick={handleSaveMyName}
-                    style={{
-                      flex: 1,
-                      background: "#3b82f6",
-                      color: "white",
-                      padding: "8px 10px",
-                      borderRadius: 8,
-                      border: "none",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                      fontSize: 13,
+                    onClick={async () => {
+                      try {
+                        const res = await fetch(`${API_BASE}/api/auth/users/${user.id}`, {
+                          method: "PATCH",
+                          headers: {
+                            Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+                            "Content-Type": "application/json",
+                          },
+                          body: JSON.stringify({ name: selfForm.name }),
+                        });
+                        const data = await res.json();
+                        if (data.error) throw new Error(data.error);
+                        const updated = { ...user, name: selfForm.name };
+                        localStorage.setItem("authUser", JSON.stringify(updated));
+                        setUser(updated);
+                        alert("Nome atualizado com sucesso!");
+                      } catch (e: any) {
+                        alert("Erro ao atualizar nome: " + (e?.message || "desconhecido"));
+                      }
                     }}
+                    style={{ flex: 1, background: "#3b82f6", color: "white", padding: "8px 10px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 600, fontSize: 13 }}
                   >
                     Salvar nome
                   </button>
@@ -782,16 +655,7 @@ export default function HomePage() {
                         confirmNewPassword: "",
                       }))
                     }
-                    style={{
-                      background: "#6b7280",
-                      color: "white",
-                      padding: "8px 10px",
-                      borderRadius: 8,
-                      border: "none",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                      fontSize: 13,
-                    }}
+                    style={{ background: "#6b7280", color: "white", padding: "8px 10px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 600, fontSize: 13 }}
                   >
                     Desfazer
                   </button>
@@ -800,98 +664,73 @@ export default function HomePage() {
 
               <div style={{ height: 1, background: "#f3f4f6" }} />
 
-              {/* Senha */}
               <div style={{ display: "grid", gap: 8 }}>
                 <div style={{ fontWeight: 700, color: "#111827", fontSize: 14 }}>Alterar senha</div>
-
                 <label style={{ fontSize: 12.5, fontWeight: 600, color: "#374151" }}>Senha atual</label>
                 <input
                   type="password"
                   value={selfForm.currentPassword}
                   onChange={(e) => setSelfForm((p) => ({ ...p, currentPassword: e.target.value }))}
-                  style={{
-                    width: "100%",
-                    padding: "8px 10px",
-                    border: "1px solid #e5e7eb",
-                    borderRadius: 8,
-                    fontSize: 14,
-                  }}
+                  style={{ width: "100%", padding: "8px 10px", border: "1px solid #e5e7eb", borderRadius: 8, fontSize: 14 }}
                 />
-
                 <label style={{ fontSize: 12.5, fontWeight: 600, color: "#374151" }}>Nova senha</label>
                 <input
                   type="password"
                   value={selfForm.newPassword}
                   onChange={(e) => setSelfForm((p) => ({ ...p, newPassword: e.target.value }))}
                   minLength={8}
-                  style={{
-                    width: "100%",
-                    padding: "8px 10px",
-                    border: "1px solid #e5e7eb",
-                    borderRadius: 8,
-                    fontSize: 14,
-                  }}
+                  style={{ width: "100%", padding: "8px 10px", border: "1px solid #e5e7eb", borderRadius: 8, fontSize: 14 }}
                 />
-
                 <label style={{ fontSize: 12.5, fontWeight: 600, color: "#374151" }}>Confirmar nova senha</label>
                 <input
                   type="password"
                   value={selfForm.confirmNewPassword}
                   onChange={(e) => setSelfForm((p) => ({ ...p, confirmNewPassword: e.target.value }))}
                   minLength={8}
-                  style={{
-                    width: "100%",
-                    padding: "8px 10px",
-                    border: "1px solid #e5e7eb",
-                    borderRadius: 8,
-                    fontSize: 14,
-                  }}
+                  style={{ width: "100%", padding: "8px 10px", border: "1px solid #e5e7eb", borderRadius: 8, fontSize: 14 }}
                 />
-
                 <div style={{ display: "flex", gap: 8 }}>
                   <button
-                    onClick={handleChangeMyPassword}
-                    style={{
-                      flex: 1,
-                      background: "#d97706",
-                      color: "white",
-                      padding: "8px 10px",
-                      borderRadius: 8,
-                      border: "none",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                      fontSize: 13,
+                    onClick={async () => {
+                      if (!selfForm.currentPassword || !selfForm.newPassword) {
+                        alert("Informe a senha atual e a nova senha.");
+                        return;
+                      }
+                      if (selfForm.newPassword.length < 8) {
+                        alert("A nova senha deve ter pelo menos 8 caracteres.");
+                        return;
+                      }
+                      if (selfForm.newPassword !== selfForm.confirmNewPassword) {
+                        alert("A confirmação de senha não confere.");
+                        return;
+                      }
+                      try {
+                        const res = await fetch(`${API_BASE}/api/auth/change_password`, {
+                          method: "POST",
+                          headers: {
+                            Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+                            "Content-Type": "application/json",
+                          },
+                          body: JSON.stringify({
+                            current_password: selfForm.currentPassword,
+                            new_password: selfForm.newPassword,
+                          }),
+                        });
+                        const data = await res.json();
+                        if (data.error) throw new Error(data.error);
+                        alert("Senha alterada com sucesso!");
+                        setSelfForm((p) => ({ ...p, currentPassword: "", newPassword: "", confirmNewPassword: "" }));
+                      } catch (e: any) {
+                        alert("Erro ao alterar senha: " + (e?.message || "desconhecido"));
+                      }
                     }}
+                    style={{ flex: 1, background: "#d97706", color: "white", padding: "8px 10px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 600, fontSize: 13 }}
                   >
                     Alterar senha
                   </button>
                   <button
-                    onClick={() => setSelfForm((p) => ({ ...p, currentPassword: "", newPassword: "", confirmNewPassword: "" }))}
-                    style={{
-                      background: "#6b7280",
-                      color: "white",
-                      padding: "8px 10px",
-                      borderRadius: 8,
-                      border: "none",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                      fontSize: 13,
-                    }}
-                  >
-                    Limpar
-                  </button>
-                  <button
                     onClick={() => setShowSelfEditModal(false)}
-                    style={{
-                      background: "#ef4444",
-                      color: "white",
-                      padding: "8px 10px",
-                      borderRadius: 8,
-                      border: "none",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                      fontSize: 13,
-                    }}
+                    style={{ background: "#ef4444", color: "white", padding: "8px 10px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 600, fontSize: 13 }}
                   >
                     Fechar
                   </button>

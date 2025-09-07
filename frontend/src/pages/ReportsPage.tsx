@@ -345,7 +345,7 @@ export default function ReportsPage() {
         <nav style={{ flex: 1, padding: "0.8rem", display: "flex", flexDirection: "column", gap: "0.3rem" }}>
           <MenuButton icon={<Home size={18} />} label="Início" onClick={() => navigate("/")} />
           {user.role === "admin" && (
-            <MenuButton icon={<Users size={18} />} label="Usuários" onClick={() => navigate("/admin")} />
+            <MenuButton icon={<Users size={18} />} label="Gerencial" onClick={() => navigate("/management")} title="Administrar usuários e relatórios" />
           )}
           <MenuButton
             icon={<BarChart3 size={18} />}

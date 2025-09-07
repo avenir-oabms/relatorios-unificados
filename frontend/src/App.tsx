@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import AdminPage from "./pages/AdminPage";
 import ReportsPage from "./pages/ReportsPage"; // <- NOVO
 import RequireAuth from "./components/RequireAuth";
+import GerencialPage from "./pages/GerencialPage";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/reports" element={<ReportsPage />} /> {/* <- NOVO */}
+        <Route path="/management" element={<GerencialPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
