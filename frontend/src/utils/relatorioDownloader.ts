@@ -1,98 +1,87 @@
-// Utilitário genérico para baixar relatórios (PDF, XLSX, CSV)
-// Reutilize em todos os relatórios do sistema.
+// frontend/src/utils/relatorioDownloader.ts
+type Params = Record<string, string | number | boolean | undefined | null>;
 
-export type FormatoSaida = "pdf" | "xlsx" | "csv";
+function buildQuery(params: Params) {
+  const q = new URLSearchParams();
+  Object.entries(params).forEach(([k, v]) => {
+    if (v !== undefined && v !== null && v !== "") q.append(k, String(v));
+  });
+  return q.toString();
+}
 
-export type DownloadRelatorioInput = {
-  /** Base do backend, ex.: "http://192.168.0.64:5055" */
+function getFilenameFromContentDisposition(dispo?: string | null, fallback?: string) {
+  if (!dispo) return fallback;
+  // Ex.: content-disposition: attachment; filename="Relatorio_Lista_Simples_Geral.xlsx"
+  const m = /filename\*?=(?:UTF-8'')?"?([^\";]+)"?/i.exec(dispo);
+  if (m && m[1]) return decodeURIComponent(m[1]);
+  return fallback;
+}
+
+export async function downloadRelatorio(opts: {
   baseUrl: string;
-  /** Caminho do endpoint, ex.: "/api/relatorios/lista_simples" */
-  path: string;
-  /** Parâmetros de query; ex.: { formato: 'pdf', subsecao: 'Dourados' } */
-  params: Record<string, string | number | boolean | undefined | null>;
-  /** Prefixo do arquivo; ex.: "Relatorio_Lista_Simples" */
-  filenamePrefix: string;
-  /** Campo que representa o escopo para compor o nome; ex.: "subsecao" */
-  escopoKey?: string;
-  /** Força extensão (se não vier de "formato") */
-  forceExt?: "pdf" | "xlsx" | "csv";
-  /** Nome do header do token (padrão "Authorization") */
-  authHeaderName?: string;
-  /** Prefixo do valor do token (padrão "Bearer ") */
-  authPrefix?: string;
-};
+  path: string;                   // ex.: "/api/reports/lista_simples"
+  params?: Params;                // ex.: { formato: 'xlsx', subsecao: 'Coxim' }
+  filenamePrefix?: string;        // fallback se o servidor não mandar filename
+  escopoKey?: string;             // nome do param para compor o fallback (ex.: 'subsecao')
+}) {
+  const { baseUrl, path, params = {}, filenamePrefix = "arquivo", escopoKey } = opts;
 
-export async function downloadRelatorio({
-  baseUrl,
-  path,
-  params,
-  filenamePrefix,
-  escopoKey = "subsecao",
-  forceExt,
-  authHeaderName = "Authorization",
-  authPrefix = "Bearer ",
-}: DownloadRelatorioInput): Promise<void> {
+  // Monta URL
+  const url = new URL(path, baseUrl);
+  const query = buildQuery(params);
+  if (query) url.search = query;
+
+  // Recupera token do login
   const token = localStorage.getItem("authToken") || "";
 
-  // Monta querystring
-  const qs = new URLSearchParams();
-  Object.entries(params || {}).forEach(([k, v]) => {
-    if (v !== undefined && v !== null && String(v).length > 0) qs.set(k, String(v));
+  // Faz o request com Authorization SEMPRE
+  const res = await fetch(url.toString(), {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: "*/*",
+    },
   });
 
-  const url = `${trimRight(baseUrl)}/${trimLeft(path)}?${qs.toString()}`;
-
-  // Tenta baixar via fetch (permite header Authorization)
-  try {
-    const headers: Record<string, string> = {};
-    if (token) headers[authHeaderName] = `${authPrefix}${token}`;
-
-    const resp = await fetch(url, { headers });
-
-    // Se o servidor não aceitar o fetch (CORS, etc), cai no fallback
-    if (!resp.ok || !resp.body) {
-      window.open(url, "_blank");
-      return;
+  // Trata erros (401, 403, etc.)
+  if (!res.ok) {
+    // Tenta ler JSON de erro do backend
+    let msg = `Falha ao gerar arquivo (HTTP ${res.status})`;
+    try {
+      const data = await res.json();
+      if (data?.error) msg = data.error;
+    } catch {
+      // pode não ser JSON
     }
-
-    const blob = await resp.blob();
-
-    // Define extensão
-    const formatoParam = String(params?.formato || "").toLowerCase();
-    const ext =
-      forceExt ||
-      (formatoParam === "xlsx" ? "xlsx" : formatoParam === "csv" ? "csv" : "pdf");
-
-    // Define "escopo" a partir de escopoKey
-    const rawEscopo = String(params?.[escopoKey] || "").trim();
-    const escopo = rawEscopo.length ? rawEscopo : "Geral";
-
-    // Nome final do arquivo
-    const filename = `${filenamePrefix}_${sanitize(escopo)}.${ext}`;
-
-    // Dispara download
-    const objUrl = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = objUrl;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    URL.revokeObjectURL(objUrl);
-  } catch (e) {
-    console.error("downloadRelatorio: falha no fetch, aplicando fallback.", e);
-    window.open(url, "_blank");
+    alert(msg);
+    throw new Error(msg);
   }
-}
 
-function sanitize(s: string) {
-  return s.replace(/\s+/g, "_").replace(/[^\w\-\.]+/g, "");
-}
+  // Extrai nome sugerido
+  const dispo = res.headers.get("content-disposition");
+  const extByType: Record<string, string> = {
+    "application/pdf": ".pdf",
+    "application/zip": ".zip",
+    "text/csv": ".csv",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": ".xlsx",
+  };
+  const contentType = res.headers.get("content-type") || "";
+  const ext = Object.entries(extByType).find(([t]) => contentType.startsWith(t))?.[1] || "";
 
-function trimLeft(s: string) {
-  return s.replace(/^\/+/, "");
-}
+  let fallback = filenamePrefix;
+  if (escopoKey && params[escopoKey]) fallback += `_${String(params[escopoKey])}`;
+  if (!fallback.endsWith(ext)) fallback += ext;
 
-function trimRight(s: string) {
-  return s.replace(/\/+$/, "");
+  const filename = getFilenameFromContentDisposition(dispo, fallback);
+
+  // Baixa o blob e faz o download
+  const blob = await res.blob();
+  const href = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = href;
+  a.download = filename || fallback;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(href);
 }

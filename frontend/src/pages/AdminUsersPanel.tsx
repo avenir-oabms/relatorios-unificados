@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Users, Edit, Trash2, RotateCcw, Plus } from "lucide-react";
+import { Users, Edit, Trash2, RotateCcw, Plus, Maximize2, Minimize2, Square, Move, X } from "lucide-react";
 
 const API_BASE = "http://192.168.0.64:5055";
 
@@ -44,12 +44,13 @@ function Badge({ color, children }: { color: string; children: React.ReactNode }
     <span
       style={{
         display: "inline-block",
-        padding: "4px 8px",
-        borderRadius: 999,
-        background: color + "20",
+        padding: "3px 8px",
+        borderRadius: 5,
+        background: color + "15",
         color,
         fontSize: 12,
-        fontWeight: 700,
+        fontWeight: 600,
+        lineHeight: 1.3,
       }}
     >
       {children}
@@ -62,10 +63,11 @@ export default function AdminUsersPanel() {
   const [list, setList] = useState<User[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  // modal simples de criação/edição
+  // modal redimensionável de criação/edição
   const [showModal, setShowModal] = useState(false);
   const [editing, setEditing] = useState<User | null>(null);
   const [form, setForm] = useState({ name: "", email: "", role: "usuario" as UserRole });
+  const [modalSize, setModalSize] = useState<"normal" | "large" | "fullscreen">("normal");
 
   const headers = useMemo(
     () => ({
@@ -80,7 +82,6 @@ export default function AdminUsersPanel() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // ===== CORRIGIDO: aceita array direto OU { users: [...] } / { results: [...] } e normaliza =====
   async function fetchUsers() {
     setLoading(true);
     setError(null);
@@ -124,6 +125,7 @@ export default function AdminUsersPanel() {
   function openCreate() {
     setEditing(null);
     setForm({ name: "", email: "", role: "usuario" });
+    setModalSize("normal");
     setShowModal(true);
   }
 
@@ -134,6 +136,7 @@ export default function AdminUsersPanel() {
       email: u.email || "",
       role: (u.role as UserRole) || "usuario",
     });
+    setModalSize("normal");
     setShowModal(true);
   }
 
@@ -164,7 +167,7 @@ export default function AdminUsersPanel() {
       const res = await fetch(`${API_BASE}/api/auth/users/${u.id}/reset_password`, {
         method: "POST",
         headers,
-        body: JSON.stringify({ temporary_password: "Trocar123!" }),
+        body: JSON.stringify({ new_password: "Trocar123!" }),
       });
       const data = await res.json();
       if (!res.ok || data.error) throw new Error(data.error || `HTTP ${res.status}`);
@@ -175,13 +178,14 @@ export default function AdminUsersPanel() {
   }
 
   async function toggleActive(u: User) {
-    const toStatus = u.status === "Ativo" ? "Inativo" : "Ativo";
-    if (!confirm(`${toStatus === "Inativo" ? "Desativar" : "Ativar"} ${u.name}?`)) return;
+    const toActive = u.status === "Ativo" ? 0 : 1;
+    const actionText = u.status === "Ativo" ? "Desativar" : "Ativar";
+    if (!confirm(`${actionText} ${u.name}?`)) return;
     try {
       const res = await fetch(`${API_BASE}/api/auth/users/${u.id}`, {
         method: "PATCH",
         headers,
-        body: JSON.stringify({ status: toStatus }),
+        body: JSON.stringify({ active: toActive }),
       });
       const data = await res.json();
       if (!res.ok || data.error) throw new Error(data.error || `HTTP ${res.status}`);
@@ -191,22 +195,60 @@ export default function AdminUsersPanel() {
     }
   }
 
+  // Função para obter o estilo do modal baseado no tamanho
+  const getModalStyle = () => {
+    const baseStyle = {
+      background: "white",
+      borderRadius: 12,
+      boxShadow: "0 20px 60px rgba(0,0,0,.25)",
+      overflow: "hidden",
+      transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    };
+
+    switch (modalSize) {
+      case "normal":
+        return {
+          ...baseStyle,
+          width: "100%",
+          maxWidth: "520px",
+          maxHeight: "90vh",
+        };
+      case "large":
+        return {
+          ...baseStyle,
+          width: "90%",
+          maxWidth: "800px",
+          maxHeight: "90vh",
+        };
+      case "fullscreen":
+        return {
+          ...baseStyle,
+          width: "95vw",
+          height: "95vh",
+          maxWidth: "none",
+          maxHeight: "none",
+        };
+      default:
+        return baseStyle;
+    }
+  };
+
   return (
     <div style={{ padding: 16 }}>
-      {/* Header do painel (sem sidebar/header externos) */}
+      {/* Header do painel */}
       <div
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          marginBottom: 12,
+          marginBottom: 16,
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <Users size={20} />
           <div>
-            <div style={{ fontWeight: 700, color: "#111827" }}>Gestão de Usuários</div>
-            <div style={{ fontSize: 12.5, color: "#6b7280" }}>
+            <div style={{ fontWeight: 700, color: "#111827", fontSize: 16 }}>Gestão de Usuários</div>
+            <div style={{ fontSize: 12, color: "#6b7280" }}>
               Gerencie usuários, permissões e acessos do sistema
             </div>
           </div>
@@ -216,17 +258,19 @@ export default function AdminUsersPanel() {
           style={{
             background: "#111827",
             color: "white",
-            padding: "8px 12px",
-            borderRadius: 8,
+            padding: "6px 12px",
+            borderRadius: 6,
             border: "none",
             cursor: "pointer",
             fontWeight: 600,
+            fontSize: 13,
             display: "inline-flex",
             alignItems: "center",
-            gap: 8,
+            gap: 6,
+            height: 32,
           }}
         >
-          <Plus size={16} /> Criar Usuário
+          <Plus size={14} /> Criar Usuário
         </button>
       </div>
 
@@ -234,13 +278,13 @@ export default function AdminUsersPanel() {
       <div
         style={{
           border: "1px solid #e5e7eb",
-          borderRadius: 12,
+          borderRadius: 8,
           background: "white",
           overflow: "hidden",
         }}
       >
         {loading ? (
-          <div style={{ padding: 16, color: "#6b7280" }}>Carregando usuários...</div>
+          <div style={{ padding: 16, color: "#6b7280", fontSize: 14 }}>Carregando usuários...</div>
         ) : error ? (
           <div
             style={{
@@ -248,6 +292,7 @@ export default function AdminUsersPanel() {
               background: "#fef2f2",
               color: "#b91c1c",
               borderBottom: "1px solid #fecaca",
+              fontSize: 14,
             }}
           >
             {error}
@@ -260,31 +305,32 @@ export default function AdminUsersPanel() {
                 <th style={th}>Perfil</th>
                 <th style={th}>Status</th>
                 <th style={th}>Criado em</th>
-                <th style={{ ...th, textAlign: "right", width: 280 }}>Ações</th>
+                <th style={{ ...th, textAlign: "right", width: 240 }}>Ações</th>
               </tr>
             </thead>
             <tbody>
               {list.map((u) => (
                 <tr key={u.id} style={{ borderTop: "1px solid #f3f4f6" }}>
                   <td style={td}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                       <div
                         style={{
-                          width: 30,
-                          height: 30,
+                          width: 28,
+                          height: 28,
                           borderRadius: "50%",
                           background: "#e5e7eb",
                           display: "grid",
                           placeItems: "center",
-                          fontWeight: 700,
+                          fontWeight: 600,
                           color: "#374151",
+                          fontSize: 12,
                         }}
                       >
                         {u.name?.[0]?.toUpperCase() || "?"}
                       </div>
                       <div>
-                        <div style={{ fontWeight: 600, color: "#111827" }}>{u.name}</div>
-                        <div style={{ fontSize: 12.5, color: "#6b7280" }}>{u.email}</div>
+                        <div style={{ fontWeight: 500, color: "#111827", fontSize: 14, lineHeight: 1.3 }}>{u.name}</div>
+                        <div style={{ fontSize: 12, color: "#6b7280", lineHeight: 1.3 }}>{u.email}</div>
                       </div>
                     </div>
                   </td>
@@ -297,23 +343,32 @@ export default function AdminUsersPanel() {
                     <Badge color={u.status === "Ativo" ? "#16a34a" : "#ef4444"}>{u.status}</Badge>
                   </td>
                   <td style={td}>
-                    {u.created_at ? new Date(u.created_at).toLocaleString("pt-BR") : "-"}
+                    <span style={{ fontSize: 12, color: "#6b7280" }}>
+                      {u.created_at ? new Date(u.created_at).toLocaleDateString("pt-BR") : "-"}
+                    </span>
                   </td>
                   <td style={{ ...td, textAlign: "right" }}>
-                    <div style={{ display: "inline-flex", gap: 8 }}>
-                      <button className="btn" title="Editar" onClick={() => openEdit(u)} style={btnBlue}>
-                        <Edit size={14} /> Editar
+                    <div style={{ display: "inline-flex", gap: 6, alignItems: "center" }}>
+                      <button 
+                        title="Editar" 
+                        onClick={() => openEdit(u)} 
+                        style={btnBlue}
+                      >
+                        <Edit size={13} /> Editar
                       </button>
-                      <button className="btn" title="Resetar Senha" onClick={() => resetPassword(u)} style={btnAmber}>
-                        <RotateCcw size={14} /> Resetar Senha
+                      <button 
+                        title="Resetar Senha" 
+                        onClick={() => resetPassword(u)} 
+                        style={btnAmber}
+                      >
+                        <RotateCcw size={13} /> Resetar
                       </button>
                       <button
-                        className="btn"
                         title={u.status === "Ativo" ? "Desativar" : "Ativar"}
                         onClick={() => toggleActive(u)}
-                        style={btnRed}
+                        style={u.status === "Ativo" ? btnRed : btnGreen}
                       >
-                        <Trash2 size={14} /> {u.status === "Ativo" ? "Desativar" : "Ativar"}
+                        <Trash2 size={13} /> {u.status === "Ativo" ? "Desativar" : "Ativar"}
                       </button>
                     </div>
                   </td>
@@ -321,7 +376,7 @@ export default function AdminUsersPanel() {
               ))}
               {list.length === 0 && !loading && !error && (
                 <tr>
-                  <td colSpan={5} style={{ ...td, color: "#6b7280", textAlign: "center" }}>
+                  <td colSpan={5} style={{ ...td, color: "#6b7280", textAlign: "center", fontSize: 14 }}>
                     Nenhum usuário encontrado.
                   </td>
                 </tr>
@@ -331,65 +386,213 @@ export default function AdminUsersPanel() {
         )}
       </div>
 
-      {/* Modal simples */}
+      {/* Modal Redimensionável */}
       {showModal && (
         <div
           style={{
             position: "fixed",
             inset: 0,
-            backgroundColor: "rgba(17,24,39,.45)",
+            backgroundColor: "rgba(17,24,39,.6)",
+            backdropFilter: "blur(2px)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            padding: 12,
+            padding: 20,
             zIndex: 80,
           }}
         >
-          <div
-            style={{
-              background: "white",
-              borderRadius: 12,
-              width: "100%",
-              maxWidth: 520,
-              boxShadow: "0 18px 45px rgba(0,0,0,.22)",
-              overflow: "hidden",
-            }}
-          >
-            <div style={{ padding: 12, borderBottom: "1px solid #eef2f7", fontWeight: 700 }}>
-              {editing ? "Editar usuário" : "Criar usuário"}
+          <div style={getModalStyle()}>
+            {/* Header do Modal com controles de tamanho */}
+            <div
+              style={{
+                padding: "12px 16px",
+                borderBottom: "1px solid #e5e7eb",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                background: "#f8fafc",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <div style={{ fontWeight: 700, color: "#111827", fontSize: 16 }}>
+                  {editing ? "Editar usuário" : "Criar usuário"}
+                </div>
+                {editing && (
+                  <div style={{ fontSize: 12, color: "#6b7280", fontWeight: 500 }}>
+                    ID: {editing.id}
+                  </div>
+                )}
+              </div>
+
+              {/* Controles de redimensionamento */}
+              <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                <button
+                  onClick={() => setModalSize("normal")}
+                  title="Tamanho normal"
+                  style={{
+                    ...modalControlBtn,
+                    background: modalSize === "normal" ? "#3b82f6" : "#e5e7eb",
+                    color: modalSize === "normal" ? "white" : "#6b7280",
+                  }}
+                >
+                  <Minimize2 size={14} />
+                </button>
+                <button
+                  onClick={() => setModalSize("large")}
+                  title="Tamanho grande"
+                  style={{
+                    ...modalControlBtn,
+                    background: modalSize === "large" ? "#3b82f6" : "#e5e7eb",
+                    color: modalSize === "large" ? "white" : "#6b7280",
+                  }}
+                >
+                  <Square size={14} />
+                </button>
+                <button
+                  onClick={() => setModalSize("fullscreen")}
+                  title="Tela cheia"
+                  style={{
+                    ...modalControlBtn,
+                    background: modalSize === "fullscreen" ? "#3b82f6" : "#e5e7eb",
+                    color: modalSize === "fullscreen" ? "white" : "#6b7280",
+                  }}
+                >
+                  <Maximize2 size={14} />
+                </button>
+                
+                <div style={{ width: 1, height: 20, background: "#d1d5db", margin: "0 4px" }} />
+                
+                <button
+                  onClick={() => setShowModal(false)}
+                  title="Fechar"
+                  style={{
+                    ...modalControlBtn,
+                    background: "#ef4444",
+                    color: "white",
+                  }}
+                >
+                  <X size={14} />
+                </button>
+              </div>
             </div>
-            <div style={{ padding: 14, display: "grid", gap: 10 }}>
-              <label style={label}>Nome</label>
-              <input
-                type="text"
-                value={form.name}
-                onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
-                style={input}
-              />
 
-              <label style={label}>E-mail</label>
-              <input
-                type="email"
-                value={form.email}
-                onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
-                style={input}
-              />
-
-              <label style={label}>Perfil</label>
-              <select
-                value={form.role}
-                onChange={(e) => setForm((p) => ({ ...p, role: e.target.value as UserRole }))}
-                style={{ ...input, height: 38 }}
+            {/* Conteúdo do Modal */}
+            <div 
+              style={{ 
+                padding: modalSize === "fullscreen" ? 24 : 16, 
+                display: "grid", 
+                gap: modalSize === "fullscreen" ? 16 : 12,
+                overflow: "auto",
+                maxHeight: modalSize === "fullscreen" ? "calc(95vh - 140px)" : "70vh"
+              }}
+            >
+              {/* Formulário em colunas para tela cheia */}
+              <div 
+                style={{
+                  display: modalSize === "fullscreen" ? "grid" : "block",
+                  gridTemplateColumns: modalSize === "fullscreen" ? "1fr 1fr" : "1fr",
+                  gap: modalSize === "fullscreen" ? 20 : 0,
+                }}
               >
-                <option value="admin">Administrador</option>
-                <option value="tecnico">Técnico</option>
-                <option value="usuario">Usuário</option>
-                <option value="gerente">Gerente</option>
-                <option value="coordenador">Coordenador</option>
-                <option value="diretor">Diretor</option>
-              </select>
+                {/* Coluna 1 - Dados básicos */}
+                <div style={{ display: "grid", gap: 12 }}>
+                  <div style={{ fontWeight: 700, color: "#111827", fontSize: 15 }}>
+                    Informações Básicas
+                  </div>
+                  
+                  <div>
+                    <label style={label}>Nome</label>
+                    <input
+                      type="text"
+                      value={form.name}
+                      onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))}
+                      style={input}
+                      placeholder="Digite o nome completo"
+                    />
+                  </div>
 
-              <div style={{ display: "flex", gap: 8, marginTop: 6 }}>
+                  <div>
+                    <label style={label}>E-mail</label>
+                    <input
+                      type="email"
+                      value={form.email}
+                      onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))}
+                      style={input}
+                      placeholder="exemplo@oabms.org.br"
+                    />
+                  </div>
+
+                  <div>
+                    <label style={label}>Perfil</label>
+                    <select
+                      value={form.role}
+                      onChange={(e) => setForm((p) => ({ ...p, role: e.target.value as UserRole }))}
+                      style={{ ...input, height: 38 }}
+                    >
+                      <option value="admin">Administrador</option>
+                      <option value="tecnico">Técnico</option>
+                      <option value="usuario">Usuário</option>
+                      <option value="gerente">Gerente</option>
+                      <option value="coordenador">Coordenador</option>
+                      <option value="diretor">Diretor</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Coluna 2 - Informações adicionais (só aparece em fullscreen) */}
+                {modalSize === "fullscreen" && (
+                  <div style={{ display: "grid", gap: 12 }}>
+                    <div style={{ fontWeight: 700, color: "#111827", fontSize: 15 }}>
+                      Configurações Adicionais
+                    </div>
+                    
+                    <div>
+                      <label style={label}>Departamento</label>
+                      <select style={{ ...input, height: 38 }}>
+                        <option value="">Selecione o departamento</option>
+                        <option value="ti">Tecnologia da Informação</option>
+                        <option value="juridico">Jurídico</option>
+                        <option value="administrativo">Administrativo</option>
+                        <option value="financeiro">Financeiro</option>
+                        <option value="presidencia">Presidência</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label style={label}>Observações</label>
+                      <textarea
+                        style={{
+                          ...input,
+                          height: 80,
+                          resize: "vertical",
+                          minHeight: 60,
+                        }}
+                        placeholder="Observações sobre o usuário..."
+                      />
+                    </div>
+
+                    <div style={{ 
+                      background: "#f0f9ff", 
+                      border: "1px solid #0ea5e9", 
+                      borderRadius: 8, 
+                      padding: 12,
+                      fontSize: 12,
+                      color: "#0369a1"
+                    }}>
+                      <strong>Nota:</strong> Campos adicionais estarão disponíveis em versões futuras.
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Rodapé com botões */}
+              <div style={{ 
+                display: "flex", 
+                gap: 8, 
+                marginTop: modalSize === "fullscreen" ? 20 : 12,
+                paddingTop: 12,
+                borderTop: "1px solid #e5e7eb"
+              }}>
                 <button onClick={saveUser} style={btnDark}>
                   {editing ? "Salvar alterações" : "Criar usuário"}
                 </button>
@@ -405,44 +608,103 @@ export default function AdminUsersPanel() {
   );
 }
 
+// Estilos otimizados
 const th: React.CSSProperties = {
   textAlign: "left",
   fontSize: 12,
-  fontWeight: 700,
+  fontWeight: 600,
   color: "#374151",
   padding: "10px 12px",
+  textTransform: "uppercase",
+  letterSpacing: "0.5px",
 };
 
 const td: React.CSSProperties = {
   fontSize: 13,
   color: "#111827",
-  padding: "12px",
+  padding: "10px 12px",
   verticalAlign: "middle",
 };
 
-const label: React.CSSProperties = { fontSize: 12.5, fontWeight: 600, color: "#374151" };
+const label: React.CSSProperties = { 
+  fontSize: 13, 
+  fontWeight: 600, 
+  color: "#374151",
+  marginBottom: 4,
+  display: "block",
+};
+
 const input: React.CSSProperties = {
   width: "100%",
-  padding: "8px 10px",
-  border: "1px solid #e5e7eb",
-  borderRadius: 8,
+  padding: "10px 12px",
+  border: "1px solid #d1d5db",
+  borderRadius: 6,
   fontSize: 14,
+  transition: "border-color 0.2s, box-shadow 0.2s",
+  outline: "none",
+  backgroundColor: "white",
 };
 
 const btnBase: React.CSSProperties = {
-  padding: "6px 10px",
-  borderRadius: 8,
+  padding: "5px 8px",
+  borderRadius: 5,
   border: "none",
   cursor: "pointer",
-  fontWeight: 700,
-  fontSize: 12.5,
+  fontWeight: 600,
+  fontSize: 11,
   display: "inline-flex",
   alignItems: "center",
-  gap: 6,
+  gap: 4,
+  lineHeight: 1.2,
 };
 
-const btnDark: React.CSSProperties = { ...btnBase, background: "#111827", color: "white" };
-const btnGray: React.CSSProperties = { ...btnBase, background: "#6b7280", color: "white" };
-const btnBlue: React.CSSProperties = { ...btnBase, background: "#3b82f6", color: "white" };
-const btnAmber: React.CSSProperties = { ...btnBase, background: "#d97706", color: "white" };
-const btnRed: React.CSSProperties = { ...btnBase, background: "#ef4444", color: "white" };
+const btnDark: React.CSSProperties = { 
+  ...btnBase, 
+  background: "#111827", 
+  color: "white",
+  padding: "10px 16px",
+  fontSize: 13,
+};
+
+const btnGray: React.CSSProperties = { 
+  ...btnBase, 
+  background: "#6b7280", 
+  color: "white",
+  padding: "10px 16px",
+  fontSize: 13,
+};
+
+const btnBlue: React.CSSProperties = { 
+  ...btnBase, 
+  background: "#3b82f6", 
+  color: "white" 
+};
+
+const btnAmber: React.CSSProperties = { 
+  ...btnBase, 
+  background: "#f59e0b", 
+  color: "white" 
+};
+
+const btnRed: React.CSSProperties = { 
+  ...btnBase, 
+  background: "#ef4444", 
+  color: "white" 
+};
+
+const btnGreen: React.CSSProperties = { 
+  ...btnBase, 
+  background: "#16a34a", 
+  color: "white" 
+};
+
+const modalControlBtn: React.CSSProperties = {
+  width: 28,
+  height: 28,
+  display: "grid",
+  placeItems: "center",
+  borderRadius: 4,
+  border: "none",
+  cursor: "pointer",
+  transition: "all 0.2s",
+};
