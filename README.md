@@ -222,7 +222,10 @@ Se quiser, eu também preparo um **README-backup.md** só com comandos “copiar
 
 ---
 ### ESTÃO SALVOS NO GITHUB
-
+- Abrindo terminal Git Bash: cd /x/xampp/htdocs/relatorios-unificados
+- Verificar o status da pasta: git status
+- Atualizar com o GitHub: git pull origin master
+---
 relatorios-unificados
 Comandos para atualização
 

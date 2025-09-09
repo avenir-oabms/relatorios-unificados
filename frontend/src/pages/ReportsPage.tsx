@@ -12,10 +12,12 @@ import {
   Info,
   Lock,
 } from "lucide-react";
+import { downloadRelatorio } from "../utils/relatorioDownloader";
 
 const API_BASE = "http://192.168.0.64:5055";
 
 type UserRole = "admin" | "tecnico" | "usuario" | "gerente" | "coordenador" | "diretor";
+type FormatoSaida = "pdf" | "xlsx" | "csv";
 
 type UserType = {
   id: number;
@@ -42,13 +44,82 @@ const getUserFromStorage = (): UserType | null => {
   }
 };
 
+/** ===== Modal do Relatório simples de Inscritos (Subseções) ===== */
+function ModalRelatorioSimples({
+  open,
+  onClose,
+  onSubmit,
+}: {
+  open: boolean;
+  onClose: () => void;
+  onSubmit: (params: { subsecao: string; formato: FormatoSaida }) => void;
+}) {
+  const [subsecao, setSubsecao] = useState("");
+  const [formato, setFormato] = useState<FormatoSaida>("pdf");
+  if (!open) return null;
+
+  return (
+    <div aria-modal role="dialog" className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+      <div className="w-full max-w-xl rounded-2xl bg-white p-6 shadow-xl">
+        <div className="mb-4 flex items-center justify-between">
+          <h3 className="text-lg font-semibold">Relatório simples de Inscritos</h3>
+          <button className="rounded-lg p-2 text-gray-500 hover:bg-gray-100" onClick={onClose} aria-label="Fechar">
+            ✕
+          </button>
+        </div>
+
+        <div className="space-y-4">
+          <div>
+            <label className="mb-1 block text-sm font-medium">Subseção (opcional)</label>
+            <input
+              type="text"
+              value={subsecao}
+              onChange={(e) => setSubsecao(e.target.value)}
+              placeholder="Ex.: Dourados — deixe em branco para Geral"
+              className="w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-gray-400"
+            />
+            <p className="mt-1 text-xs text-gray-500">
+              Se deixar em branco, o relatório será gerado como <b>Geral</b>.
+            </p>
+          </div>
+
+          <div>
+            <label className="mb-1 block text-sm font-medium">Formato</label>
+            <select
+              value={formato}
+              onChange={(e) => setFormato(e.target.value as FormatoSaida)}
+              className="w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-gray-400"
+            >
+              <option value="pdf">PDF</option>
+              <option value="xlsx">Excel (.xlsx)</option>
+              <option value="csv">CSV</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="mt-6 flex items-center justify-end gap-2">
+          <button className="rounded-lg border border-gray-300 px-4 py-2 text-gray-700 hover:bg-gray-50" onClick={onClose}>
+            Cancelar
+          </button>
+          <button
+            className="rounded-lg bg-[#242C44] px-4 py-2 font-medium text-white hover:opacity-90"
+            onClick={() => onSubmit({ subsecao, formato })}
+          >
+            Gerar
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ReportsPage() {
   const navigate = useNavigate();
   const [user, setUser] = useState<UserType | null>(null);
 
-  // Topo direito: badges (placeholders – ligar a endpoints reais depois)
-  const [unreadAlerts, setUnreadAlerts] = useState<number>(0);
-  const [pendingTasks, setPendingTasks] = useState<number>(0);
+  // Badges (placeholders)
+  const [unreadAlerts] = useState<number>(0);
+  const [pendingTasks] = useState<number>(0);
 
   // Modal: Meu Perfil
   const [showSelfEditModal, setShowSelfEditModal] = useState(false);
@@ -60,11 +131,14 @@ export default function ReportsPage() {
     confirmNewPassword: "",
   });
 
-  // Modal: Sobre / Créditos (rodapé da barra lateral)
+  // Modal: Sobre / Créditos
   const [showAboutModal, setShowAboutModal] = useState(false);
 
-  // Menu interno
-  const [activeTab, setActiveTab] = useState<"cadastral" | "usuarios" | "operacional">("cadastral");
+  // Abas internas
+  const [activeTab, setActiveTab] = useState<"cadastral" | "usuarios" | "operacional" | "subsecoes">("cadastral");
+
+  // Modal Relatório Simples
+  const [openRelatorioSimples, setOpenRelatorioSimples] = useState(false);
 
   useEffect(() => {
     const currentUser = getUserFromStorage();
@@ -73,11 +147,6 @@ export default function ReportsPage() {
       return;
     }
     setUser(currentUser);
-    // Exemplos para ligar contadores reais no futuro:
-    // fetch(`${API_BASE}/api/notifications/unread_count`, { headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` }})
-    //   .then(r=>r.json()).then(d=>setUnreadAlerts(d.count||0));
-    // fetch(`${API_BASE}/api/tasks/pending_count`, { headers: { Authorization: `Bearer ${localStorage.getItem("authToken")}` }})
-    //   .then(r=>r.json()).then(d=>setPendingTasks(d.count||0));
   }, [navigate]);
 
   function handleLogout() {
@@ -99,14 +168,9 @@ export default function ReportsPage() {
   }
 
   async function handleSaveMyName() {
-    if (!user?.id) {
-      alert("Usuário atual não encontrado.");
-      return;
-    }
-    if (!selfForm.name.trim()) {
-      alert("Informe um nome válido.");
-      return;
-    }
+    if (!user?.id) return alert("Usuário atual não encontrado.");
+    if (!selfForm.name.trim()) return alert("Informe um nome válido.");
+
     try {
       const res = await fetch(`${API_BASE}/api/auth/users/${user.id}`, {
         method: "PATCH",
@@ -117,10 +181,8 @@ export default function ReportsPage() {
         body: JSON.stringify({ name: selfForm.name }),
       });
       const data = await res.json();
-      if (data.error) {
-        alert("Erro ao salvar: " + data.error);
-        return;
-      }
+      if (data.error) return alert("Erro ao salvar: " + data.error);
+
       const updated = { ...user, name: selfForm.name };
       localStorage.setItem("authUser", JSON.stringify(updated));
       setUser(updated);
@@ -131,18 +193,9 @@ export default function ReportsPage() {
   }
 
   async function handleChangeMyPassword() {
-    if (!selfForm.currentPassword || !selfForm.newPassword) {
-      alert("Informe a senha atual e a nova senha.");
-      return;
-    }
-    if (selfForm.newPassword.length < 8) {
-      alert("A nova senha deve ter pelo menos 8 caracteres.");
-      return;
-    }
-    if (selfForm.newPassword !== selfForm.confirmNewPassword) {
-      alert("A confirmação de senha não confere.");
-      return;
-    }
+    if (!selfForm.currentPassword || !selfForm.newPassword) return alert("Informe a senha atual e a nova senha.");
+    if (selfForm.newPassword.length < 8) return alert("A nova senha deve ter pelo menos 8 caracteres.");
+    if (selfForm.newPassword !== selfForm.confirmNewPassword) return alert("A confirmação de senha não confere.");
     try {
       const res = await fetch(`${API_BASE}/api/auth/change_password`, {
         method: "POST",
@@ -156,10 +209,7 @@ export default function ReportsPage() {
         }),
       });
       const data = await res.json();
-      if (data.error) {
-        alert("Erro ao alterar senha: " + data.error);
-        return;
-      }
+      if (data.error) return alert("Erro ao alterar senha: " + data.error);
       alert("Senha alterada com sucesso!");
       setSelfForm((p) => ({ ...p, currentPassword: "", newPassword: "", confirmNewPassword: "" }));
     } catch {
@@ -167,12 +217,10 @@ export default function ReportsPage() {
     }
   }
 
-  if (!user) {
-    return null;
-  }
-
+  if (!user) return null;
   const isAdmin = user.role === "admin";
 
+  // Helpers UI
   const MenuButton = ({
     icon,
     label,
@@ -371,6 +419,8 @@ export default function ReportsPage() {
             display: "flex",
             alignItems: "flex-start",
             gap: "0.5rem",
+            fontSize: "0.72rem",
+            color: "rgba(255,255,255,.85)",
           }}
         >
           <button
@@ -391,7 +441,7 @@ export default function ReportsPage() {
           >
             <Info size={16} />
           </button>
-          <div style={{ fontSize: "0.72rem", lineHeight: 1.3, color: "rgba(255,255,255,.85)" }}>
+          <div>
             Desenvolvido pelo <strong>Departamento de Tecnologia da Informação</strong> OAB/MS
           </div>
         </div>
@@ -418,18 +468,8 @@ export default function ReportsPage() {
 
             {/* Topo direito: atalhos com badge + perfil */}
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <BadgeIcon
-                icon={<Bell size={16} />}
-                count={unreadAlerts}
-                title="Notificações"
-                onClick={() => navigate("/notifications")}
-              />
-              <BadgeIcon
-                icon={<ClipboardList size={16} />}
-                count={pendingTasks}
-                title="Tarefas"
-                onClick={() => navigate("/tasks")}
-              />
+              <BadgeIcon icon={<Bell size={16} />} title="Notificações" count={unreadAlerts} />
+              <BadgeIcon icon={<ClipboardList size={16} />} title="Tarefas" count={pendingTasks} />
 
               <div style={{ textAlign: "right", marginLeft: 6 }}>
                 <div
@@ -484,7 +524,6 @@ export default function ReportsPage() {
               >
                 <Pencil size={15} />
               </button>
-
               <button
                 onClick={handleLogout}
                 title="Sair"
@@ -508,7 +547,7 @@ export default function ReportsPage() {
         {/* Conteúdo */}
         <main style={{ flex: 1, padding: "1.2rem", overflow: "auto" }}>
           {!isAdmin ? (
-            // Acesso restrito
+            // Bloqueio por perfil
             <div
               style={{
                 background: "white",
@@ -546,7 +585,7 @@ export default function ReportsPage() {
             </div>
           ) : (
             <>
-              {/* Menu interno */}
+              {/* Abas internas */}
               <div
                 style={{
                   background: "white",
@@ -561,9 +600,10 @@ export default function ReportsPage() {
                 <TabButton label="Cadastral" active={activeTab === "cadastral"} onClick={() => setActiveTab("cadastral")} />
                 <TabButton label="Usuários (em breve)" disabled />
                 <TabButton label="Operacional (em breve)" disabled />
+                <TabButton label="Subseções" active={activeTab === "subsecoes"} onClick={() => setActiveTab("subsecoes")} />
               </div>
 
-              {/* Área de conteúdo da aba */}
+              {/* Conteúdo das abas */}
               {activeTab === "cadastral" && (
                 <section
                   style={{
@@ -607,17 +647,47 @@ export default function ReportsPage() {
                             borderRadius: 6,
                           }}
                         />
-                        <div
-                          style={{
-                            marginTop: 8,
-                            height: 10,
-                            width: "70%",
-                            background: "#e5e7eb",
-                            borderRadius: 6,
-                          }}
-                        />
                       </div>
                     ))}
+                  </div>
+                </section>
+              )}
+
+              {activeTab === "subsecoes" && (
+                <section
+                  style={{
+                    background: "white",
+                    border: "1px solid #e5e7eb",
+                    borderRadius: 12,
+                    padding: 16,
+                  }}
+                >
+                  <h3 style={{ margin: 0, fontSize: "1.05rem", fontWeight: 700, color: "#111827" }}>
+                    Subseções
+                  </h3>
+                  <p style={{ margin: "0.25rem 0 1rem 0", color: "#6b7280" }}>
+                    Selecione um relatório para gerar.
+                  </p>
+
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {/* Card: Relatório simples de Inscritos */}
+                    <div className="rounded-lg border border-gray-200 p-4">
+                      <div className="mb-1 text-sm font-semibold">Relatório simples de Inscritos</div>
+                      <p className="mb-3 text-xs text-gray-600">
+                        Lista por subseção (ou Geral), com exportação em PDF, Excel ou CSV.
+                      </p>
+                      <button
+                        onClick={() => setOpenRelatorioSimples(true)}
+                        className="rounded-lg bg-[#242C44] px-3 py-2 text-sm font-medium text-white hover:opacity-90"
+                      >
+                        Abrir
+                      </button>
+                    </div>
+
+                    {/* Espaço para futuros relatórios */}
+                    <div className="rounded-lg border border-dashed border-gray-200 p-4 text-sm text-gray-400">
+                      (em breve) Outros relatórios de Subseções
+                    </div>
                   </div>
                 </section>
               )}
@@ -626,299 +696,27 @@ export default function ReportsPage() {
         </main>
       </div>
 
-      {/* Modal “Sobre / Créditos” */}
-      {showAboutModal && (
-        <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            backgroundColor: "rgba(15,23,42,.55)",
-            backdropFilter: "blur(1px)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "12px",
-            zIndex: 90,
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: "white",
-              borderRadius: 14,
-              boxShadow: "0 18px 45px rgba(0,0,0,.22)",
-              width: "100%",
-              maxWidth: "30rem",
-            }}
-            role="dialog"
-            aria-labelledby="sobre-title"
-          >
-            <div
-              style={{
-                padding: "12px 14px",
-                borderBottom: "1px solid #eef2f7",
-                display: "flex",
-                alignItems: "center",
-                gap: 10,
-              }}
-            >
-              <Info size={18} />
-              <div id="sobre-title" style={{ fontWeight: 700, color: "#111827", lineHeight: 1.2 }}>
-                Sobre o SGC
-              </div>
-            </div>
-
-            <div style={{ padding: 14, display: "grid", gap: 10, fontSize: 14, color: "#374151" }}>
-              <p>
-                <strong>SGC — Sistema de Gerenciamento Central</strong><br />
-                Desenvolvido pelo <strong>Departamento de Tecnologia da Informação</strong> OAB/MS.
-              </p>
-              <p>
-                Versão: 1.0.0 (placeholder) • Build: {new Date().toLocaleDateString("pt-BR")}
-              </p>
-              <p>
-                Contato: ti@oabms.org.br (placeholder). Este modal pode exibir changelog, termos de uso e políticas de privacidade.
-              </p>
-              <div style={{ display: "flex", justifyContent: "flex-end", gap: 8, marginTop: 6 }}>
-                <button
-                  onClick={() => setShowAboutModal(false)}
-                  style={{
-                    background: "#111827",
-                    color: "white",
-                    padding: "8px 12px",
-                    borderRadius: 8,
-                    border: "none",
-                    cursor: "pointer",
-                    fontWeight: 600,
-                    fontSize: 13,
-                  }}
-                >
-                  Fechar
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Modal: Meu Perfil (compacto) */}
-      {showSelfEditModal && (
-        <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            backgroundColor: "rgba(17,24,39,.55)",
-            backdropFilter: "blur(1px)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "12px",
-            zIndex: 80,
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: "white",
-              borderRadius: 14,
-              boxShadow: "0 18px 45px rgba(0,0,0,.22)",
-              width: "100%",
-              maxWidth: "26rem",
-            }}
-            role="dialog"
-            aria-labelledby="meu-perfil-title"
-          >
-            <div
-              style={{
-                padding: "12px 14px",
-                borderBottom: "1px solid #eef2f7",
-                display: "flex",
-                alignItems: "center",
-                gap: 10,
-              }}
-            >
-              <div
-                style={{
-                  width: 34,
-                  height: 34,
-                  borderRadius: "50%",
-                  background: "#e5e7eb",
-                  display: "grid",
-                  placeItems: "center",
-                  fontWeight: 600,
-                  color: "#374151",
-                }}
-              >
-                {user.name?.[0]}
-              </div>
-              <div>
-                <div id="meu-perfil-title" style={{ fontWeight: 600, color: "#111827", lineHeight: 1.2 }}>
-                  Meu Perfil
-                </div>
-                <div style={{ fontSize: 12, color: "#6b7280" }}>{user.email}</div>
-              </div>
-            </div>
-
-            <div style={{ padding: 14, display: "grid", gap: 12 }}>
-              {/* Nome */}
-              <div style={{ display: "grid", gap: 8 }}>
-                <label style={{ fontSize: 12.5, fontWeight: 600, color: "#374151" }}>Nome</label>
-                <input
-                  type="text"
-                  value={selfForm.name}
-                  onChange={(e) => setSelfForm((p) => ({ ...p, name: e.target.value }))}
-                  style={{
-                    width: "100%",
-                    padding: "8px 10px",
-                    border: "1px solid #e5e7eb",
-                    borderRadius: 8,
-                    fontSize: 14,
-                  }}
-                />
-                <div style={{ display: "flex", gap: 8 }}>
-                  <button
-                    onClick={handleSaveMyName}
-                    style={{
-                      flex: 1,
-                      background: "#3b82f6",
-                      color: "white",
-                      padding: "8px 10px",
-                      borderRadius: 8,
-                      border: "none",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                      fontSize: 13,
-                    }}
-                  >
-                    Salvar nome
-                  </button>
-                  <button
-                    onClick={() =>
-                      setSelfForm((p) => ({
-                        ...p,
-                        name: user?.name || "",
-                        currentPassword: "",
-                        newPassword: "",
-                        confirmNewPassword: "",
-                      }))
-                    }
-                    style={{
-                      background: "#6b7280",
-                      color: "white",
-                      padding: "8px 10px",
-                      borderRadius: 8,
-                      border: "none",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                      fontSize: 13,
-                    }}
-                  >
-                    Desfazer
-                  </button>
-                </div>
-              </div>
-
-              <div style={{ height: 1, background: "#f3f4f6" }} />
-
-              {/* Senha */}
-              <div style={{ display: "grid", gap: 8 }}>
-                <div style={{ fontWeight: 700, color: "#111827", fontSize: 14 }}>Alterar senha</div>
-
-                <label style={{ fontSize: 12.5, fontWeight: 600, color: "#374151" }}>Senha atual</label>
-                <input
-                  type="password"
-                  value={selfForm.currentPassword}
-                  onChange={(e) => setSelfForm((p) => ({ ...p, currentPassword: e.target.value }))}
-                  style={{
-                    width: "100%",
-                    padding: "8px 10px",
-                    border: "1px solid #e5e7eb",
-                    borderRadius: 8,
-                    fontSize: 14,
-                  }}
-                />
-
-                <label style={{ fontSize: 12.5, fontWeight: 600, color: "#374151" }}>Nova senha</label>
-                <input
-                  type="password"
-                  value={selfForm.newPassword}
-                  onChange={(e) => setSelfForm((p) => ({ ...p, newPassword: e.target.value }))}
-                  minLength={8}
-                  style={{
-                    width: "100%",
-                    padding: "8px 10px",
-                    border: "1px solid #e5e7eb",
-                    borderRadius: 8,
-                    fontSize: 14,
-                  }}
-                />
-
-                <label style={{ fontSize: 12.5, fontWeight: 600, color: "#374151" }}>Confirmar nova senha</label>
-                <input
-                  type="password"
-                  value={selfForm.confirmNewPassword}
-                  onChange={(e) => setSelfForm((p) => ({ ...p, confirmNewPassword: e.target.value }))}
-                  minLength={8}
-                  style={{
-                    width: "100%",
-                    padding: "8px 10px",
-                    border: "1px solid #e5e7eb",
-                    borderRadius: 8,
-                    fontSize: 14,
-                  }}
-                />
-
-                <div style={{ display: "flex", gap: 8 }}>
-                  <button
-                    onClick={handleChangeMyPassword}
-                    style={{
-                      flex: 1,
-                      background: "#d97706",
-                      color: "white",
-                      padding: "8px 10px",
-                      borderRadius: 8,
-                      border: "none",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                      fontSize: 13,
-                    }}
-                  >
-                    Alterar senha
-                  </button>
-                  <button
-                    onClick={() => setSelfForm((p) => ({ ...p, currentPassword: "", newPassword: "", confirmNewPassword: "" }))}
-                    style={{
-                      background: "#6b7280",
-                      color: "white",
-                      padding: "8px 10px",
-                      borderRadius: 8,
-                      border: "none",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                      fontSize: 13,
-                    }}
-                  >
-                    Limpar
-                  </button>
-                  <button
-                    onClick={() => setShowSelfEditModal(false)}
-                    style={{
-                      background: "#ef4444",
-                      color: "white",
-                      padding: "8px 10px",
-                      borderRadius: 8,
-                      border: "none",
-                      cursor: "pointer",
-                      fontWeight: 600,
-                      fontSize: 13,
-                    }}
-                  >
-                    Fechar
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Modal: Relatório simples */}
+      <ModalRelatorioSimples
+        open={openRelatorioSimples}
+        onClose={() => setOpenRelatorioSimples(false)}
+        onSubmit={async (params) => {
+          await downloadRelatorio({
+            baseUrl: API_BASE,
+            // 🔁 usa o prefixo certo do backend (app.py registra /api/reports)
+            path: "/api/reports/lista_simples",
+            params: {
+              formato: params.formato,
+              subsecao: params.subsecao,
+              // se PDF e sem subseção → gerar um PDF por subseção (ZIP)
+              ...(params.formato === "pdf" && !params.subsecao ? { modo: "multi" } : {}),
+            },
+            filenamePrefix: "Relatorio_Lista_Simples",
+            escopoKey: "subsecao",
+          });
+          setOpenRelatorioSimples(false);
+        }}
+      />
     </div>
   );
 }

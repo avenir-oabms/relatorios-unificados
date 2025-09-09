@@ -1,0 +1,4134 @@
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 6, in <module>
+    from auth import bp as auth_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\auth.py", line 4, in <module>
+    from sqlalchemy import text
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\sqlalchemy\__init__.py", line 12, in <module>
+    from . import util as _util
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\sqlalchemy\util\__init__.py", line 72, in <module>
+    from .concurrency import await_fallback as await_fallback
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\sqlalchemy\util\concurrency.py", line 27, in <module>
+    from ._concurrency_py3k import await_only as await_only
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 24, in <module>
+    from .langhelpers import memoized_property
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 94, in <module>
+    class safe_reraise:
+KeyboardInterrupt
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+
+Aborted!
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+Usage: python -m flask run [OPTIONS]
+Try 'python -m flask run --help' for help.
+
+Error: While importing 'app', an ImportError was raised:
+
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\.venv\Lib\site-packages\flask\cli.py", line 245, in locate_app
+    __import__(module_name)
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
+
+
+Aborted!

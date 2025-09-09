@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "E:\xampp\htdocs\relatorios-unificados\backend\app.py", line 7, in <module>
+    from reports import bp as reports_bp
+  File "E:\xampp\htdocs\relatorios-unificados\backend\reports.py", line 10, in <module>
+    from reportlab.lib.pagesizes import A4
+ModuleNotFoundError: No module named 'reportlab'
