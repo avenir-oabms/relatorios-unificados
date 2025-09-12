@@ -71,7 +71,7 @@ MYSQL_PASSWORD=Senha particular
 
 # SQL SERVER (dados dos relatórios)
 # Requer ODBC Driver 17/18
-MSSQL_DSN=Driver={ODBC Driver 17 for SQL Server};Server=172.29.7.20;Database=HBConselhos;UID=consultas_python;PWD=oab7onysht$$cPBms;TrustServerCertificate=yes
+MSSQL_DSN=Driver={ODBC Driver 17 for SQL Server};Server=172.29.7.20;Database=HBConselhos;UID=consultas_python;PWD=SenhaParticular;TrustServerCertificate=yes
 ```
 
 ### Instalação e execução:
