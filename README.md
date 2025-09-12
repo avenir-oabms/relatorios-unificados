@@ -67,7 +67,7 @@ MYSQL_HOST=localhost
 MYSQL_PORT=3306
 MYSQL_DB=relatorios_auth
 MYSQL_USER=relatorios_user
-MYSQL_PASSWORD=R3l@t0r!os#2025
+MYSQL_PASSWORD=Senha particular
 
 # SQL SERVER (dados dos relatórios)
 # Requer ODBC Driver 17/18
